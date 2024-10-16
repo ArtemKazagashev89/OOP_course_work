@@ -1,4 +1,4 @@
-def filter_vacancies(vacancies, filter_words):
+def filter_vacancies(vacancies: list, filter_words: list) -> list:
     """Фильтрует вакансии по ключевым словам"""
     return [
         v
@@ -7,7 +7,7 @@ def filter_vacancies(vacancies, filter_words):
     ]
 
 
-def get_vacancies_by_salary(vacancies, salary_range):
+def get_vacancies_by_salary(vacancies: list, salary_range: str) -> list:
     """Получает вакансии в заданном диапазоне зарплат."""
     min_salary, max_salary = map(int, salary_range.split("-"))
     filtered_vacancies = []
@@ -25,7 +25,7 @@ def get_vacancies_by_salary(vacancies, salary_range):
     return filtered_vacancies
 
 
-def sort_vacancies(vacancies):
+def sort_vacancies(vacancies: list) -> list:
     """Сортирует вакансии по зарплате."""
     return sorted(
         vacancies,
@@ -37,7 +37,7 @@ def sort_vacancies(vacancies):
     )
 
 
-def get_top_vacancies(vacancies, n):
+def get_top_vacancies(vacancies: list, n: int) -> list:
     """Получает топ n вакансий"""
     return vacancies[:n]
 
